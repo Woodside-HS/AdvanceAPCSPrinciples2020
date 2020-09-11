@@ -2,22 +2,22 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-//This bit is for deciding what phrase/temp bracket it is. It returns an int corresponding to a specific lyric
-function Api() {
+//This bit is for deciding what phrase/temp bracket it is in Fahrenheit. It returns a specific lyric
+function Quote(api) {
   if((api>460) && (api<40)){
-    return ( 1 ); //"And it's just like the ocean under the moon"
+    return ( "And it's just like the ocean under the moon" ); //For between -460 and 40
   }
   if((api>40) && (api<65)){
-    return ( 2 ); //"But you stay so cool"
+    return ( "But you stay so cool" ); //For between 40 and 65
   }
   if((api>65) && (api<80)){
-    return ( 3 ); //"Because you're so smooth"
+    return ( "Because you're so smooth" ); //For between 65 and 80
   }
   if((api>80) && (api<95)){
-    return ( 4 ); //"Man it's a hot one"
+    return ( "Man it's a hot one" ); //For between 80 and 95
   }
   if((api>95) && (api<400)){
-    return ( 5 ); //"Like seven inches from the midday sunz"
+    return ( "Like seven inches from the midday sun" ); //For between 95 and 400
   }
 }
 
