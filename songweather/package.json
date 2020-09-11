@@ -32,6 +32,7 @@
     ]
   },
   "devDependencies": {
-    "create-react-component-folder": "^0.3.2"
+    "create-react-component-folder": "^0.3.2",
+    "styled-components": "^5.2.0"
   }
 }
