@@ -2,6 +2,11 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+window.onload = init;
+
+function init(){
+  Quote(variableName);
+}
 //This bit is for deciding what phrase/temp bracket it is in Fahrenheit. It returns a specific lyric
 function Quote(api) {
   if((api>460) && (api<40)){
