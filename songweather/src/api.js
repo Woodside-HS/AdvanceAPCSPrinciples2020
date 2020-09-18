@@ -3,15 +3,17 @@ import logo from './logo.svg';
 import './App.css';
 const API_KEY = "f0bd126297ec17be3cf7cfdad1b91dd3";
 
-function getWeather() {
-	const API_CALL = await fetch('http://api.openweathermap.org/data/2.5/weather?q=Woodside&appid=S{API_KEY}');
+function getWeather(city, country) {
+	this.country = country;
+	this.city = city;
+	const API_CALL = await fetch('http://api.openweathermap.org/data/2.5/weather?q=${city},${country}&appid=${API_KEY}');
 	const data = await API_CALL.json;
-	return data.main.temp;
+	currentTemp = data.main.temp;
+	return currentTemp;
 }
-
 //This bit is for deciding what phrase/temp bracket it is in Fahrenheit. It returns a specific lyric
 function Quote(api) {
-  	if((api>460) && (api<40)){
+  	if((api>-460) && (api<40)){
     		return ( "And it's just like the ocean under the moon" ); //For between -460 and 40
   	}
   	if((api>40) && (api<65)){
