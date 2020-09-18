@@ -4,7 +4,7 @@ class Display extends Component {
   render() {
     return (
         <div>
-          <button id="button">Information</button>
+            <p>I'd rather be listening to smooth</p>
         </div>
     );
   }

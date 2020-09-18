@@ -5,7 +5,7 @@ import './App.css';
 window.onload = init;
 
 function init(){
-  Quote(variableName);
+  Quote(65);
 }
 //This bit is for deciding what phrase/temp bracket it is in Fahrenheit. It returns a specific lyric
 function Quote(api) {
