@@ -2,12 +2,9 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-window.onload = init;
-
-function init(){
-  Quote(variableName);
-}
 //This bit is for deciding what phrase/temp bracket it is in Fahrenheit. It returns a specific lyric
+//Function will be called by the GUI when initializing
+
 function Quote(api) {
   if((api>460) && (api<40)){
     return ( "And it's just like the ocean under the moon" ); //For between -460 and 40
