@@ -6,7 +6,7 @@ import './App.css';
 //Function will be called by the GUI when initializing
 
 function Quote(api) {
-  if((api>460) && (api<40)){
+  if((api>-460) && (api<40)){
     return ( "And it's just like the ocean under the moon" ); //For between -460 and 40
   }
   if((api>40) && (api<65)){
