@@ -3,12 +3,29 @@ import logo from './logo.svg';
 import './App.css';
 
 window.onload = init;
+const API_KEY = "f0bd126297ec17be3cf7cfdad1b91dd3";
 
 function init(){
-  Quote(65);
 }
+
+function convertTemp(kelvin){
+  const celsius = kelvin - 273;
+  //Convert celsius to Fahrenheit
+  let fahrenheit = celsius * (9/5) + 32;
+  //Rounding down fahrenheit
+  return Math.floor(fahrenheit);
+}
+
+async function getWeather(city, country) {
+  const API_CALL = await fetch('http://api.openweathermap.org/data/2.5/weather?q=Woodside,${country}&appid=f0bd126297ec17be3cf7cfdad1b91dd3')
+  const data = await (API_CALL.json())
+  const currentTemp = data.main.temp;
+  return convertTemp(currentTemp);
+}
+
 //This bit is for deciding what phrase/temp bracket it is in Fahrenheit. It returns a specific lyric
-function Quote(api) {
+export const Quote = async (city, country) => {
+  const api = await getWeather(city, country)
   if((api>460) && (api<40)){
     return ( "And it's just like the ocean under the moon" ); //For between -460 and 40
   }
@@ -26,4 +43,3 @@ function Quote(api) {
   }
 }
 
-export default Api;
