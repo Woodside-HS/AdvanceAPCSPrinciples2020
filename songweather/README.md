@@ -66,3 +66,11 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+### Frontend logic
+
+The frontend logic of the program is a simple function, that is called by the backend. Using a variable fed from the API, it returns a string to be displayed by the backend on screen.
+
+### GUI
+
+The GUI is just an instance variable, that is initiliazed then edited based on the frontend logic function, then is displayed, with an about page (simple button) and a home button (also simple button)
