@@ -17,7 +17,8 @@ function convertTemp(kelvin){
 }
 
 async function getWeather(city, country) {
-  const API_CALL = await fetch('http://api.openweathermap.org/data/2.5/weather?q=Woodside,${country}&appid=f0bd126297ec17be3cf7cfdad1b91dd3')
+  const API_CALL = await fetch('https://api.openweathermap.org/data/2.5/weather?q=Woodside,${country}&appid=25ad0e0534462dd113e125e3e8106a1f')
+  console.log(API_CALL)
   const data = await (API_CALL.json())
   const currentTemp = data.main.temp;
   return convertTemp(currentTemp);

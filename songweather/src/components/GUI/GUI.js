@@ -7,7 +7,7 @@ class GUI extends Component {
         Quote("Woodside", "United States").then((quote) => {
             this.Q = quote;
             console.log(this.Q)
-            this.forceUpdate()
+            this.forceUpdate();
         })
     }
     render() {
