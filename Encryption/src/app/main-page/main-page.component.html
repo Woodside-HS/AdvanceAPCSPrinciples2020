@@ -16,176 +16,108 @@
 <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
 
 <!-- !PAGE CONTENT! -->
-<div class="w3-main">
+<div class="w3-main" style="text-align: center">
 
   <!-- Header -->
   <header id="portfolio">
     <a href="#"><img src="/w3images/avatar_g2.jpg" style="width:65px;" class="w3-circle w3-right w3-margin w3-hide-large w3-hover-opacity"></a>
     <span class="w3-button w3-hide-large w3-xxlarge w3-hover-text-grey" onclick="w3_open()"><i class="fa fa-bars"></i></span>
-    <div class="w3-container">
+    <div class="w3-container" style="background-color: gray">
       <h1><b>Encryption</b></h1>
-      <div class="w3-section w3-bottombar w3-padding-16">
-        <span class="w3-margin-right">Encryption Types:</span>
-        <button class="w3-button w3-white"><i class="fa fa-diamond w3-margin-right"></i>Design</button>
-        <button class="w3-button w3-white w3-hide-small"><i class="fa fa-photo w3-margin-right"></i>Photos</button>
-        <button class="w3-button w3-white w3-hide-small"><i class="fa fa-map-pin w3-margin-right"></i>Art</button>
-      </div>
     </div>
   </header>
 
   <!-- First Photo Grid-->
   <div class="w3-row-padding">
-    <h3 style="margin: 1em">Encryption type</h3>
-    <div class="w3-third w3-container w3-margin-bottom">
-      <div class="w3-container w3-white">
-        <p><b>Lorem Ipsum</b></p>
-        <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
-      </div>
-    </div>
-    <div class="w3-third w3-container w3-margin-bottom">
-      <div class="w3-container w3-white">
-        <p><b>Lorem Ipsum</b></p>
-        <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
-      </div>
-    </div>
-    <div class="w3-third w3-container">
-      <div class="w3-container w3-white">
-        <p><b>Lorem Ipsum</b></p>
-        <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+    <h3 style="margin: 1em">Encryption type: Caesar Cypher</h3>
+    <div class="w3-third w3-container w3-margin-bottom" style="width: auto">
+      <div>
+        <p>TEXT ABOUT CAESAR CYPHERS</p>
+        <h4>Here's an example of a caesar cypher</h4>
+        <img src="../../assets/Screen Shot 2020-11-27 at 12.25.38 AM.png" style="width: 60%;">
+        <h3>Use a caesar cypher!</h3>
+        <input type="text" [(ngModel)]="CCinput">
+        <br>
+        <button type="button" style="margin: 1em" (click)="encript_caesar()">Encrypt</button>
+        <p>{{CCreturnArea}}</p>
       </div>
     </div>
   </div>
-
-  <!-- Second Photo Grid-->
+<hr style="border-top: solid black;">
   <div class="w3-row-padding">
-    <div class="w3-third w3-container w3-margin-bottom">
-      <div class="w3-container w3-white">
-        <p><b>Lorem Ipsum</b></p>
-        <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
-      </div>
-    </div>
-    <div class="w3-third w3-container w3-margin-bottom">
-      <div class="w3-container w3-white">
-        <p><b>Lorem Ipsum</b></p>
-        <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
-      </div>
-    </div>
-    <div class="w3-third w3-container">
-      <div class="w3-container w3-white">
-        <p><b>Lorem Ipsum</b></p>
-        <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
-      </div>
-    </div>
-  </div>
+    <h3 style="margin: 1em">Encryption type: Vigenère Cipher</h3>
+    <div class="w3-third w3-container w3-margin-bottom" style="width: 100%">
+      <div>
+        <p>TEXT ABOUT Vigenère CYPHERS</p>
+        <h4>Here's a Vigenère Cipher Table</h4>
+        <img src="../../assets/Screen%20Shot%202020-11-27%20at%2012.40.40%20AM.png" style="width: 30%;">
+        <h4>Here's an example of the use Vigenère Cipher</h4>
+        <img src="../../assets/Screen%20Shot%202020-11-27%20at%2012.42.11%20AM.png" style="width: 60%;">
 
-
-  <!-- Images of Me -->
-  <div class="w3-row-padding w3-padding-16" id="about">
-    <div class="w3-col m6">
-    </div>
-    <div class="w3-col m6">
-    </div>
-  </div>
-
-  <div class="w3-container w3-padding-large" style="margin-bottom:32px">
-    <h4><b>About Me</b></h4>
-    <p>Just me, myself and I, exploring the universe of unknownment. I have a heart of love and an interest of lorem ipsum and mauris neque quam blog. I want to share my world with you. Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla. Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
-    <hr>
-
-    <h4>Technical Skills</h4>
-    <!-- Progress bars / Skills -->
-    <p>Photography</p>
-    <div class="w3-grey">
-      <div class="w3-container w3-dark-grey w3-padding w3-center" style="width:95%">95%</div>
-    </div>
-    <p>Web Design</p>
-    <div class="w3-grey">
-      <div class="w3-container w3-dark-grey w3-padding w3-center" style="width:85%">85%</div>
-    </div>
-    <p>Photoshop</p>
-    <div class="w3-grey">
-      <div class="w3-container w3-dark-grey w3-padding w3-center" style="width:80%">80%</div>
-    </div>
-    <p>
-      <button class="w3-button w3-dark-grey w3-padding-large w3-margin-top w3-margin-bottom">
-        <i class="fa fa-download w3-margin-right"></i>Download Resume
-      </button>
-    </p>
-    <hr>
-
-    <h4>How much I charge</h4>
-    <!-- Pricing Tables -->
-    <div class="w3-row-padding" style="margin:0 -16px">
-      <div class="w3-third w3-margin-bottom">
-        <ul class="w3-ul w3-border w3-white w3-center w3-opacity w3-hover-opacity-off">
-          <li class="w3-black w3-xlarge w3-padding-32">Basic</li>
-          <li class="w3-padding-16">Web Design</li>
-          <li class="w3-padding-16">Photography</li>
-          <li class="w3-padding-16">1GB Storage</li>
-          <li class="w3-padding-16">Mail Support</li>
-          <li class="w3-padding-16">
-            <h2>$ 10</h2>
-            <span class="w3-opacity">per month</span>
-          </li>
-          <li class="w3-light-grey w3-padding-24">
-            <button class="w3-button w3-teal w3-padding-large w3-hover-black">Sign Up</button>
-          </li>
-        </ul>
-      </div>
-
-      <div class="w3-third w3-margin-bottom">
-        <ul class="w3-ul w3-border w3-white w3-center w3-opacity w3-hover-opacity-off">
-          <li class="w3-teal w3-xlarge w3-padding-32">Pro</li>
-          <li class="w3-padding-16">Web Design</li>
-          <li class="w3-padding-16">Photography</li>
-          <li class="w3-padding-16">50GB Storage</li>
-          <li class="w3-padding-16">Endless Support</li>
-          <li class="w3-padding-16">
-            <h2>$ 25</h2>
-            <span class="w3-opacity">per month</span>
-          </li>
-          <li class="w3-light-grey w3-padding-24">
-            <button class="w3-button w3-teal w3-padding-large w3-hover-black">Sign Up</button>
-          </li>
-        </ul>
-      </div>
-
-      <div class="w3-third">
-        <ul class="w3-ul w3-border w3-white w3-center w3-opacity w3-hover-opacity-off">
-          <li class="w3-black w3-xlarge w3-padding-32">Premium</li>
-          <li class="w3-padding-16">Web Design</li>
-          <li class="w3-padding-16">Photography</li>
-          <li class="w3-padding-16">Unlimited Storage</li>
-          <li class="w3-padding-16">Endless Support</li>
-          <li class="w3-padding-16">
-            <h2>$ 25</h2>
-            <span class="w3-opacity">per month</span>
-          </li>
-          <li class="w3-light-grey w3-padding-24">
-            <button class="w3-button w3-teal w3-padding-large w3-hover-black">Sign Up</button>
-          </li>
-        </ul>
+        <h3>Use a Vigenère Cipher!</h3>
+        <input type="text" [(ngModel)]="VCinput" placeholder="Message">
+        <br>
+        <input type="text" [(ngModel)]="VCShiftinput" placeholder="Shift Key">
+        <br>
+        <button type="button" style="margin: 1em" (click)="encript_Vingnere()">Encrypt</button>
+        <p>{{VCreturnArea}}</p>
       </div>
     </div>
   </div>
-
-  <div class="w3-black w3-center w3-padding-24">Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-opacity">w3.css</a></div>
-
+  <hr style="border-top: solid black;">
+  <div class="w3-row-padding">
+    <h3 style="margin: 1em">Encryption type: Public Key Encryption</h3>
+    <div class="w3-third w3-container w3-margin-bottom" style="width: 100%">
+      <div>
+        <p>TEXT ABOUT Public Key Encryption</p>
+        <h4>Here's a Vigenère Cipher Table</h4>
+        <img src="../../assets/Sectigo-Quantum-Lab-Diagram.png" style="width: 50%;">
+        <h2>Interactive Public Key Encryption Process</h2>
+        <h3>Step 1: The receiver generates a public key and a private key</h3>
+        <p>TEXT EXPLAINING THE ACTIONS OF THE STEP</p>
+        <button type="button" style="margin: 1em" (click)="generate_keys()">Generate A Public and Private Key</button>
+        <h5>Public Key</h5>
+        <textarea readonly>{{publicKeyReturn}}</textarea>
+        <h5>Private Key</h5>
+        <textarea readonly>{{privateKeyReturn}}</textarea>
+        <h3>Step 2: The receiver sends the public key to the computer that sending the message</h3>
+        <p>TEXT EXPLAINING THE ACTIONS OF THE STEP</p>
+        <h3>Step 3: The messenger encrypts the message using the private key</h3>
+        <p>TEXT EXPLAINING THE ACTIONS OF THE STEP</p>
+        <h5>Public Key</h5>
+        <textarea readonly>{{publicKeyReturn}}</textarea>
+        <br>
+        <h5>Message to be encrypted</h5>
+        <input type="text" [(ngModel)]="PubKeyEncrpMessage" placeholder="Message">
+        <br>
+        <button type="button" style="margin: 1em" (click)="encript_message_public()">Encrypt</button>
+        <h4>Encrypted Message</h4>
+        <textarea readonly>{{encryptedMessage}}</textarea>
+        <h3>Step 4: Send the encrypted message to the receiver</h3>
+        <p>TEXT EXPLAINING THE ACTIONS OF THE STEP</p>
+        <h3>Step 5: Thereceiver decrypts the message using the public key</h3>
+        <p>TEXT EXPLAINING THE ACTIONS OF THE STEP</p>
+        <h5>Private Key</h5>
+        <textarea readonly>{{privateKeyReturn}}</textarea>
+        <br>
+        <h5>Encrypted Message</h5>
+        <textarea readonly>{{encryptedMessage}}</textarea>
+        <br>
+        <button type="button" style="margin: 1em" (click)="decrypt_message_public()">Decrypt</button>
+        <h4>Decrypted Message</h4>
+        <textarea readonly>{{decryptedMessage}}</textarea>
+      </div>
+    </div>
+  </div>
   <!-- End page content -->
 </div>
-
-<script>
-  // Script to open and close sidebar
-  function w3_open() {
-    document.getElementById("mySidebar").style.display = "block";
-    document.getElementById("myOverlay").style.display = "block";
-  }
-
-  function w3_close() {
-    document.getElementById("mySidebar").style.display = "none";
-    document.getElementById("myOverlay").style.display = "none";
-  }
-</script>
+<footer >
+  <a href="#"><img src="/w3images/avatar_g2.jpg" style="width:65px;" class="w3-circle w3-right w3-margin w3-hide-large w3-hover-opacity"></a>
+  <span class="w3-button w3-hide-large w3-xxlarge w3-hover-text-grey" onclick="w3_open()"><i class="fa fa-bars"></i></span>
+  <div class="w3-container" style="background-color: gray">
+    <h1><b>Encryption</b></h1>
+  </div>
+</footer>
 
 </body>
 </html>
