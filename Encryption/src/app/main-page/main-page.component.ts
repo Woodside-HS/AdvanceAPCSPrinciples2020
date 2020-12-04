@@ -40,8 +40,19 @@ export class MainPageComponent implements OnInit {
 
   encript_Vingnere(): void {
     const input = this.VCinput;
-    const shift = this.VCShiftinput;
-    this.VCreturnArea = shift;
+    const shift = this.VCShiftinput;	
+	for (var i = 0, j = 0; i < input.length; i++) {
+		var c = input.charCodeAt(i);
+		if (isUppercase(c)) {
+			VCreturnArea += String.fromCharCode((c - 65 + shift[j % shift.length]) % 26 + 65);
+			j++;
+		} else if (isLowercase(c)) {
+			VCreturnArea += String.fromCharCode((c - 97 + shift[j % shift.length]) % 26 + 97);
+			j++;
+		} else {
+			VCreturnArea += input.charAt(i);
+		}
+	}
   }
 
   generate_keys(): void {
