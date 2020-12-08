@@ -32,7 +32,7 @@
     <h3 style="margin: 1em">Encryption type: Caesar Cypher</h3>
     <div class="w3-third w3-container w3-margin-bottom" style="width: auto">
       <div>
-        <p>TEXT ABOUT CAESAR CYPHERS</p>
+        <p>Caesar cyphers are one of the oldest and most widely-used forms of cryptology. In it, the alphabet is shifted down a certain number of letters, either left or right. With a right shift of 2, A would become C, B would become D, and so on. Made famous by Caesar, they offer almost no security in the modern day.</p>
         <h4>Here's an example of a caesar cypher</h4>
         <img src="../../assets/Screen Shot 2020-11-27 at 12.25.38 AM.png" style="width: 60%;">
         <h3>Use a caesar cypher!</h3>
@@ -48,7 +48,7 @@
     <h3 style="margin: 1em">Encryption type: Vigenère Cipher</h3>
     <div class="w3-third w3-container w3-margin-bottom" style="width: 100%">
       <div>
-        <p>TEXT ABOUT Vigenère CYPHERS</p>
+        <p>In this cypher, named after Blaise de Vigenère yet invented by Giovan Battista Bellaso, is much more simple than it seems. In it, one writes out the alphabet, shifts it down one letter, then writes it again, looping and creating a table. At the top axis of the table, the word or phrase to be encrypted is used. On the left axis, the keyword is used (and repeated to be the correct length). Where the two intersect, (i.e. the first letter of the "real" word and the first letter of the keyword), the new letter is used.</p>
         <h4>Here's a Vigenère Cipher Table</h4>
         <img src="../../assets/Screen%20Shot%202020-11-27%20at%2012.40.40%20AM.png" style="width: 30%;">
         <h4>Here's an example of the use Vigenère Cipher</h4>
@@ -69,21 +69,20 @@
     <h3 style="margin: 1em">Encryption type: Public Key Encryption</h3>
     <div class="w3-third w3-container w3-margin-bottom" style="width: 100%">
       <div>
-        <p>TEXT ABOUT Public Key Encryption</p>
-        <h4>Here's a Vigenère Cipher Table</h4>
+        <p>Public key encryption, invented (in part) by my neighbor Whitfield (who happens to have a very cute dog), is a secure method of encryption using pairs of keys, one public key and one private used only by the owner. Using one-way functions it can be made entirely secure.</p>
         <img src="../../assets/Sectigo-Quantum-Lab-Diagram.png" style="width: 50%;">
         <h2>Interactive Public Key Encryption Process</h2>
         <h3>Step 1: The receiver generates a public key and a private key</h3>
-        <p>TEXT EXPLAINING THE ACTIONS OF THE STEP</p>
+        <p>A public key is used to encrypt, which anyone can do. The private key, however, is not shared.</p>
         <button type="button" style="margin: 1em" (click)="generate_keys()">Generate A Public and Private Key</button>
         <h5>Public Key</h5>
         <textarea readonly>{{publicKeyReturn}}</textarea>
         <h5>Private Key</h5>
         <textarea readonly>{{privateKeyReturn}}</textarea>
         <h3>Step 2: The receiver sends the public key to the computer that sending the message</h3>
-        <p>TEXT EXPLAINING THE ACTIONS OF THE STEP</p>
-        <h3>Step 3: The messenger encrypts the message using the private key</h3>
-        <p>TEXT EXPLAINING THE ACTIONS OF THE STEP</p>
+        <p>The public key is used to encrypt, not unencrypt, and therefore it can be sent out. Since the private key is kept by the reciever, it knows it is secure.</p>
+        <h3>Step 3: The messenger encrypts the message using the public key</h3>
+        <p>The private key still remains with the receiver, making the messages secure.</p>
         <h5>Public Key</h5>
         <textarea readonly>{{publicKeyReturn}}</textarea>
         <br>
@@ -94,9 +93,8 @@
         <h4>Encrypted Message</h4>
         <textarea readonly>{{encryptedMessage}}</textarea>
         <h3>Step 4: Send the encrypted message to the receiver</h3>
-        <p>TEXT EXPLAINING THE ACTIONS OF THE STEP</p>
         <h3>Step 5: Thereceiver decrypts the message using the public key</h3>
-        <p>TEXT EXPLAINING THE ACTIONS OF THE STEP</p>
+        <p>Since the private key remains with the receiver, it can be sure that the message is secure, and decrypt it it after receiving.</p>
         <h5>Private Key</h5>
         <textarea readonly>{{privateKeyReturn}}</textarea>
         <br>
