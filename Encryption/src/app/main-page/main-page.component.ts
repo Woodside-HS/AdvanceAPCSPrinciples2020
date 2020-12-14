@@ -22,37 +22,22 @@ export class MainPageComponent implements OnInit {
   }
 
   encript_caesar(): void {
-    this.CCreturnArea = this.CCinput;
-	for (let i = 0; i < this.CCinput.length; i++) {
-		let c = str[i];
-		if (c.match(/[a-z]/i)) {
-		  let code = str.charCodeAt(i);
-		  if (code >= 65 && code <= 90) {
-			c = String.fromCharCode(((code - 65 + amount) % 26) + 65);
-		  }
-		  else if (code >= 97 && code <= 122) {
-			c = String.fromCharCode(((code - 97 + amount) % 26) + 97);
-		  }
-		}
-		CCreturnArea += c;
-	}
+	this.CCreturnArea = CCinput.replace(/([a-z])/g, 
+		($1) => String.fromCharCode(($1.charCodeAt(0) + 5 + 26 - 97) % 26 + 97)
+		).replace(/([A-Z])/g, 
+		($1) => String.fromCharCode(($1.charCodeAt(0) + 5 + 26 - 65) % 26 + 65));
   }
-
-  encript_Vingnere(): void {
-    const input = this.VCinput;
-    const shift = this.VCShiftinput;	
-	for (var i = 0, j = 0; i < input.length; i++) {
-		var c = input.charCodeAt(i);
-		if (isUppercase(c)) {
-			VCreturnArea += String.fromCharCode((c - 65 + shift[j % shift.length]) % 26 + 65);
-			j++;
-		} else if (isLowercase(c)) {
-			VCreturnArea += String.fromCharCode((c - 97 + shift[j % shift.length]) % 26 + 97);
-			j++;
-		} else {
-			VCreturnArea += input.charAt(i);
-		}
-	}
+ 
+    /** Enrypt a given text using key */
+   encript_Vingnere(): void {
+    this.VCreturnArea = Array.prototype.map.call(formatText(VCinput), (letter: string, index: number): string => {
+        return String.fromCharCode((letter.charCodeAt(0) + this.VCShiftinput.charCodeAt(index % this.VCShiftinput.length) - 130) % 26 + 65)
+    }).join('');
+  }
+ 
+    /** Converts to uppercase and removes non characters */
+  formatText(text: string): string {
+    return text.toUpperCase().replace(/[^A-Z]/g, "");
   }
 
   generate_keys(): void {
