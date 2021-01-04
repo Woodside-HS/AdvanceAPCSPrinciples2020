@@ -22,19 +22,19 @@ export class MainPageComponent implements OnInit {
   }
 
   encript_caesar(): void {
-	this.CCreturnArea = CCinput.replace(/([a-z])/g, 
+	this.CCreturnArea = CCinput.replace(/([a-z])/g,
 		($1) => String.fromCharCode(($1.charCodeAt(0) + 5 + 26 - 97) % 26 + 97)
-		).replace(/([A-Z])/g, 
+		).replace(/([A-Z])/g,
 		($1) => String.fromCharCode(($1.charCodeAt(0) + 5 + 26 - 65) % 26 + 65));
   }
- 
+
     /** Enrypt a given text using key */
    encript_Vingnere(): void {
     this.VCreturnArea = Array.prototype.map.call(formatText(VCinput), (letter: string, index: number): string => {
         return String.fromCharCode((letter.charCodeAt(0) + this.VCShiftinput.charCodeAt(index % this.VCShiftinput.length) - 130) % 26 + 65)
     }).join('');
   }
- 
+
     /** Converts to uppercase and removes non characters */
   formatText(text: string): string {
     return text.toUpperCase().replace(/[^A-Z]/g, "");
